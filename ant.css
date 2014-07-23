@@ -1,3 +1,7 @@
+/**
+ * Some specificity added on purpose
+ */
+
 .CodeMirror {
     line-height: 1.5;
     color: #F7F3D2;
@@ -174,13 +178,14 @@
     background: #FFFF26;
 }
 
+/* Colde folder extension */
 .CodeMirror-foldmarker {
     color: #150C0B;
     background-color: #D9AC71;
     border: none;
 }
 
-/* Colde folder extension */
+
 .CodeMirror-foldgutter, 
 .CodeMirror-foldgutter-open, 
 .CodeMirror-foldgutter, 
@@ -197,7 +202,7 @@
     }
 
 
-
+/* make the status bar the same color as the rest of the interface */
 #status-bar,
 #status-indicators {
     color: #ccc;
