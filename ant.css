@@ -1,0 +1,211 @@
+.CodeMirror {
+    line-height: 1.5;
+    color: #F7F3D2;
+	background-color: #150C0B;
+}
+    .doctype-css .CodeMirror {
+        color: #EEC991;
+    }
+
+.CodeMirror .CodeMirror-cursor {
+    border-left-color: #F7F3D2;
+}
+.CodeMirror-selected {
+    background: #5D1D15;
+}
+
+.CodeMirror-gutters {
+    padding: 0;
+    background: #100908;
+    border: none;
+}
+
+/* Linenumbers */
+.CodeMirror-linenumbers {
+    padding: 0;
+    background-color: #100908;
+}
+.CodeMirror-linenumber {
+    padding: 0 1em;
+    color: #563D36;
+}
+
+.CodeMirror .CodeMirror-activeline-background {
+    outline: none;
+}
+.CodeMirror-activeline {
+    color: inherit;
+    background-color: #271614;
+}
+
+.cm-s-ant .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: #76554B;
+    background-color: #1F1110!important;
+}
+
+.CodeMirror-lines {
+    padding: 1em 0;
+}
+
+/* Code */
+.CodeMirror-code pre {
+    padding: 0 1em ;
+}
+
+.cm-comment { 
+    color: #9C7D72;
+}
+
+.cm-string,
+.cm-string-2 {
+    color: #C9D575;
+}
+    /* eg: regular expression */
+    .cm-string-2 {
+        border-bottom: 1px dotted #C9D575;
+    }
+
+.cm-meta {
+    color: #E47A56;
+}
+.cm-keyword,
+.cm-operator {
+    color: #9CCD2C;
+}
+
+
+/* eg: functions calls in php */
+.cm-variable {
+    color: #FFF86F;
+}
+    /* php: keyword + variable / variable + variable (tried with #FFCD08 before) */
+    .doctype-php .cm-keyword + .cm-variable,
+    .doctype-php .cm-variable + .cm-variable {
+        color: #FF9A35;
+    }
+
+    /* global variables in js */
+    .doctype-javascript .cm-variable {
+        color: #b7eb98;
+        text-shadow: 0 0 0.5em rgba(183,235,152,0.5);
+    }
+
+/* normal variables in php */
+.cm-variable-2 {
+    color: #b7eb98;
+}
+
+/* eg: css3 selectors */
+.cm-variable-3 {
+    color: #ABD38F;
+}
+
+.cm-tag,
+.cm-bracket {
+    color: #FFCD08;
+}
+    .doctype-css .cm-meta + .cm-tag {
+        color: #ABD38F;
+    }
+
+    .CodeMirror-matchingtag.cm-tag,
+    .CodeMirror-matchingtag.cm-bracket {
+        color: #FFFF26;
+        text-decoration: underline;
+    }
+
+/* eg: css classes */
+.cm-qualifier { 
+    color: #BDEC5B;
+}
+
+.cm-property {
+    color: #D9AC71;
+}
+
+.cm-atom { 
+    color: #00D96D;
+}
+    .doctype-css .cm-atom { 
+        color: #CA7840;
+    }
+
+.cm-number {
+    color: #FF5C26;
+}
+
+/* eg: at rule in css, variables in js */
+.cm-def { 
+    color: #b7eb98;
+}
+    /* normal variables declarations / (local) function names declarations in javascript */
+    .doctype-javascript .cm-def { 
+        color: #FF9A35;
+    }
+
+    .doctype-css .cm-def { 
+        color: #FFFF00;
+    }
+
+.cm-attribute {
+    color: #78E087;
+}
+
+/* eg: php predefined functions */
+.cm-builtin {
+    color: #FF9326;
+}
+
+
+.cm-s-ant .CodeMirror-matchingbracket {
+    color: #FFCD08;
+    border-bottom: 1px solid #FFCD08;
+}
+.cm-s-ant .CodeMirror-nonmatchingbracket {
+    color: #f00;
+    border-bottom: 1px solid #f00;
+}
+
+.cm-error {
+    border-bottom: 1px dotted #f00;
+}
+
+.CodeMirror-searching {
+    background: #FFFF26;
+}
+
+.CodeMirror-foldmarker {
+    color: #150C0B;
+    background-color: #D9AC71;
+    border: none;
+}
+
+/* Colde folder extension */
+.CodeMirror-foldgutter, 
+.CodeMirror-foldgutter-open, 
+.CodeMirror-foldgutter, 
+.CodeMirror-foldgutter-folded, 
+.CodeMirror-foldgutter-blank {
+    color: #1f110f;
+}
+    .CodeMirror-activeline .CodeMirror-foldgutter, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-open, 
+    .CodeMirror-activeline .CodeMirror-foldgutter, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-folded, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-blank {
+        color: #76554B;
+    }
+
+
+
+#status-bar,
+#status-indicators {
+    color: #ccc;
+    background: #3c3f41;
+}
+
+#status-info,
+#status-indent,
+#status-overwrite {
+    color: inherit;
+}
