@@ -3,7 +3,7 @@
  */
 
 .CodeMirror {
-    line-height: 1.5;
+    line-height: 1.6;
     color: #F7F3D2;
 	background-color: #150C0B;
 }
@@ -82,9 +82,9 @@
 .cm-variable {
     color: #FFF86F;
 }
-    /* php: keyword + variable / variable + variable (tried with #FFCD08 before) */
-    .doctype-php .cm-keyword + .cm-variable,
-    .doctype-php .cm-variable + .cm-variable {
+    /* php: tried keyword + variable / variable + variable (tried with #FFCD08 before) */
+    /* problems when the keyword/variable are selected */
+    .doctype-php .cm-variable {
         color: #FF9A35;
     }
 
