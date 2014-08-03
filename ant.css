@@ -1,59 +1,106 @@
 /**
- * Some specificity added on purpose
+ * Ant Brackets Theme
+ * https://github.com/ant7/ant-brackets-theme
+ *
+ * Dark color theme meant to be easy on the eyes
+ * 
+ * Author: Antonia Ciocodeica <ant@studio78.ro> (http://www.behance.net/ant7)
+ * Licence: MIT 
  */
 
-.CodeMirror {
+.CodeMirror,
+.CodeMirror-scroll {
+    color: #f0e9c7;
     line-height: 1.6;
-    color: #F7F3D2;
-	background-color: #150C0B;
+    background-color: #150C0B;
 }
-    .doctype-css .CodeMirror {
-        color: #EEC991;
+    /* TODO: style the inline widget a little bit more */
+    .inline-widget .CodeMirror {
+        background-color: #080404!important;
     }
 
-.CodeMirror .CodeMirror-cursor {
-    border-left-color: #F7F3D2;
-}
-.CodeMirror-selected {
-    background: #5D1D15;
-}
 
-.CodeMirror-gutters {
-    padding: 0;
-    background: #100908;
-    border: none;
-}
-
-/* Linenumbers */
-.CodeMirror-linenumbers {
-    padding: 0;
-    background-color: #100908;
-}
-.CodeMirror-linenumber {
-    padding: 0 1em;
-    color: #563D36;
-}
-
-.CodeMirror .CodeMirror-activeline-background {
-    outline: none;
-}
-.CodeMirror-activeline {
+.CodeMirror-activeline-background {
     color: inherit;
     background-color: #271614;
 }
 
-.cm-s-ant .CodeMirror-activeline .CodeMirror-gutter-elt {
-    color: #76554B;
-    background-color: #1F1110!important;
+.CodeMirror-cursor {
+    border-color: #F7F3D2!important;
 }
 
-.CodeMirror-lines {
-    padding: 1em 0;
+.CodeMirror-selected {
+    background: #5D1D15;
 }
+
+/* Gutters */
+.CodeMirror-gutters {
+    background: #100908;
+}
+    .inline-widget .CodeMirror-gutters {
+        background-color: #0a0505;
+    }
+
+/* Active line gutter */
+.CodeMirror-activeline > div,
+.CodeMirror-activeline .CodeMirror-gutter-elt {
+    height: 100%;
+}
+    .CodeMirror-activeline .CodeMirror-gutter-elt {
+        color: #76554B;
+        background-color: #1F1110;
+    }
+
+/* Linenumbers */
+.CodeMirror-linenumber {
+    color: #563D36;
+}
+    .inline-widget .CodeMirror-linenumbers {
+        background: none!important;
+    }
+
+/* Error */
+.cm-error {
+    color: #dc322f;
+    border-bottom: 1px dotted;
+}
+
+/* Searching */
+.CodeMirror-searching {
+    color: #5D1D15!important;
+    background: #FFFF26;
+}
+
+/* Quick view highlight */
+.quick-view-highlight {
+    color: inherit!important;
+    background: #5D1D15;
+}
+
+/* Code folder extension */
+.CodeMirror-foldmarker {
+    color: #150C0B;
+    background-color: #D9AC71;
+    border: none;
+}
+
+.CodeMirror-foldgutter, 
+.CodeMirror-foldgutter-open, 
+.CodeMirror-foldgutter-folded, 
+.CodeMirror-foldgutter-blank {
+    color: #1f110f;
+}
+    .CodeMirror-activeline .CodeMirror-foldgutter, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-open, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-folded, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-blank {
+        color: #76554B;
+    }
+
 
 /* Code */
 .CodeMirror-code pre {
-    padding: 0 1em ;
+    padding: 0 1em;
 }
 
 .cm-comment { 
@@ -66,7 +113,7 @@
 }
     /* eg: regular expression */
     .cm-string-2 {
-        border-bottom: 1px dotted #C9D575;
+        border-bottom: 1px dotted;
     }
 
 .cm-meta {
@@ -77,24 +124,12 @@
     color: #9CCD2C;
 }
 
-
-/* eg: functions calls in php */
+/* eg: functions calls in php (tried before with #FFF86F) */
 .cm-variable {
-    color: #FFF86F;
+    color: #FF9A35;
 }
-    /* php: tried keyword + variable / variable + variable (tried with #FFCD08 before) */
-    /* problems when the keyword/variable are selected */
-    .doctype-php .cm-variable {
-        color: #FF9A35;
-    }
 
-    /* global variables in js */
-    .doctype-javascript .cm-variable {
-        color: #b7eb98;
-        text-shadow: 0 0 0.5em rgba(183,235,152,0.5);
-    }
-
-/* normal variables in php */
+/* eg: normal variables in php */
 .cm-variable-2 {
     color: #b7eb98;
 }
@@ -104,19 +139,24 @@
     color: #ABD38F;
 }
 
+/* tags & brackets */
 .cm-tag,
 .cm-bracket {
     color: #FFCD08;
 }
-    .doctype-css .cm-meta + .cm-tag {
-        color: #ABD38F;
+    /* tags & brackets - matching / non-matching */
+    .CodeMirror-matchingtag,
+    .CodeMirror-matchingbracket {
+        background: none;
     }
-
     .CodeMirror-matchingtag.cm-tag,
-    .CodeMirror-matchingtag.cm-bracket {
-        color: #FFFF26;
-        text-decoration: underline;
+    .CodeMirror-matchingbracket {
+        color: #FFFF26!important;
+        border-bottom: 1px solid;
     }
+        .CodeMirror-nonmatchingbracket {
+            color: #dc322f!important;
+        }
 
 /* eg: css classes */
 .cm-qualifier { 
@@ -128,11 +168,8 @@
 }
 
 .cm-atom { 
-    color: #00D96D;
+    color: #c7703a;
 }
-    .doctype-css .cm-atom { 
-        color: #CA7840;
-    }
 
 .cm-number {
     color: #FF5C26;
@@ -142,14 +179,6 @@
 .cm-def { 
     color: #b7eb98;
 }
-    /* normal variables declarations / (local) function names declarations in javascript */
-    .doctype-javascript .cm-def { 
-        color: #FF9A35;
-    }
-
-    .doctype-css .cm-def { 
-        color: #FFFF00;
-    }
 
 .cm-attribute {
     color: #78E087;
@@ -158,59 +187,4 @@
 /* eg: php predefined functions */
 .cm-builtin {
     color: #FF9326;
-}
-
-
-.cm-s-ant .CodeMirror-matchingbracket {
-    color: #FFCD08;
-    border-bottom: 1px solid #FFCD08;
-}
-.cm-s-ant .CodeMirror-nonmatchingbracket {
-    color: #f00;
-    border-bottom: 1px solid #f00;
-}
-
-.cm-error {
-    border-bottom: 1px dotted #f00;
-}
-
-.CodeMirror-searching {
-    background: #FFFF26;
-}
-
-/* Colde folder extension */
-.CodeMirror-foldmarker {
-    color: #150C0B;
-    background-color: #D9AC71;
-    border: none;
-}
-
-
-.CodeMirror-foldgutter, 
-.CodeMirror-foldgutter-open, 
-.CodeMirror-foldgutter, 
-.CodeMirror-foldgutter-folded, 
-.CodeMirror-foldgutter-blank {
-    color: #1f110f;
-}
-    .CodeMirror-activeline .CodeMirror-foldgutter, 
-    .CodeMirror-activeline .CodeMirror-foldgutter-open, 
-    .CodeMirror-activeline .CodeMirror-foldgutter, 
-    .CodeMirror-activeline .CodeMirror-foldgutter-folded, 
-    .CodeMirror-activeline .CodeMirror-foldgutter-blank {
-        color: #76554B;
-    }
-
-
-/* make the status bar the same color as the rest of the interface */
-#status-bar,
-#status-indicators {
-    color: #ccc;
-    background: #3c3f41;
-}
-
-#status-info,
-#status-indent,
-#status-overwrite {
-    color: inherit;
 }
