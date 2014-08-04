@@ -8,7 +8,6 @@
  * Licence: MIT 
  */
 
-
 .CodeMirror,
 .CodeMirror-scroll {
     color: #f0e9c7;
@@ -59,12 +58,6 @@
     .inline-widget .CodeMirror-linenumbers {
         background: none!important;
     }
-
-/* Error */
-.cm-error {
-    color: #dc322f;
-    border-bottom: 1px dotted;
-}
 
 /* Searching */
 .CodeMirror-searching {
@@ -188,4 +181,10 @@
 /* eg: php predefined functions */
 .cm-builtin {
     color: #FF9326;
+}
+
+/* Error */
+.cm-error {
+    color: #dc322f;
+    border-bottom: 1px dotted;
 }
