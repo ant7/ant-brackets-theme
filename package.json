@@ -3,9 +3,12 @@
     "title": "Ant Theme",
     "description": "Dark color theme meant to be easy on the eyes",
     "homepage": "https://github.com/ant7/ant-brackets-theme",
-    "version": "1.0.1",
-    "author": "Antonia Ciocodeica <ant@studio78.ro> (http://www.behance.net/ant7)",
+    "version": "1.0.2",
+    "author": "Antonia Ciocodeica <ant@studio78.ro>",
     "license": "MIT",
+    "engines": {
+        "brackets": ">=0.42.0"
+    },
     "theme": {
         "file": "ant.css",
         "dark": true

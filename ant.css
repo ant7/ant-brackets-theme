@@ -101,36 +101,39 @@
     color: #9C7D72;
 }
 
-.cm-string,
-.cm-string-2 {
-    color: #C9D575;
+.cm-string {
+    color: #cbcb78;
 }
-    /* eg: regular expression */
-    .cm-string-2 {
-        border-bottom: 1px dotted;
-    }
+
+/* eg: regular expression */
+.cm-string-2 {
+    color: #a1ad65;
+    border-bottom: 1px dotted;
+}
 
 .cm-meta {
     color: #E47A56;
+    border-bottom: 1px dotted rgba(228, 122, 86, 0.4);
 }
+
 .cm-keyword,
 .cm-operator {
-    color: #9CCD2C;
+    color: #a6d047;
 }
 
-/* eg: functions calls in php (tried before with #FFF86F) */
+/* eg: functions */
 .cm-variable {
-    color: #FF9A35;
+    color: #ff8a35;
 }
 
-/* eg: normal variables in php */
+/* eg: normal variables */
 .cm-variable-2 {
-    color: #b7eb98;
+    color: #92c188;
 }
 
 /* eg: css3 selectors */
 .cm-variable-3 {
-    color: #ABD38F;
+    color: #ffd53a;
 }
 
 /* tags & brackets */
@@ -148,21 +151,19 @@
         color: #FFFF26!important;
         border-bottom: 1px solid;
     }
-        .CodeMirror-nonmatchingbracket {
-            color: #dc322f!important;
-        }
 
 /* eg: css classes */
 .cm-qualifier { 
-    color: #BDEC5B;
+    color: #b6d673;
 }
 
+/* css property / js method / property */
 .cm-property {
-    color: #D9AC71;
+    color: #c67c50;
 }
 
 .cm-atom { 
-    color: #c7703a;
+    color: #f4b94a;
 }
 
 .cm-number {
@@ -171,20 +172,38 @@
 
 /* eg: at rule in css, variables in js */
 .cm-def { 
-    color: #b7eb98;
+    color: #d6ebac;
 }
 
 .cm-attribute {
-    color: #78E087;
+    color: #80d040;
 }
 
-/* eg: php predefined functions */
+/* eg: predefined functions */
 .cm-builtin {
-    color: #FF9326;
+    color: #ffaa1e;
 }
+
+/* Markdown */
+.cm-header { 
+    color: #fac05e; 
+    font-size: 1.1em;
+}
+.cm-quote {
+    color: #b6d673;
+}
+.cm-hr {
+    color: #d6a33c;
+}
+
+.cm-link {
+    color: #FF5C26;
+}
+
 
 /* Error */
-.cm-error {
-    color: #dc322f;
-    border-bottom: 1px dotted;
+.cm-error,
+.CodeMirror-nonmatchingbracket {
+    color: #ff2f2f;
+    border-bottom: 2px solid;
 }

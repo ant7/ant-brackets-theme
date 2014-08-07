@@ -1,4 +1,4 @@
-Ant theme
+#Ant theme
 =========
 
-Dark color theme meant to be easy on the eyes.
+Dark color theme meant to be easy on the eyes. 
