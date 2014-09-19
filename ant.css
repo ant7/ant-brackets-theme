@@ -78,16 +78,12 @@
     border: none;
 }
 
-.CodeMirror-foldgutter, 
-.CodeMirror-foldgutter-open, 
-.CodeMirror-foldgutter-folded, 
-.CodeMirror-foldgutter-blank {
-    color: #1f110f;
+.CodeMirror-foldgutter-open:after, 
+.CodeMirror-foldgutter-folded:after {
+    color: #2a1713;
 }
-    .CodeMirror-activeline .CodeMirror-foldgutter, 
-    .CodeMirror-activeline .CodeMirror-foldgutter-open, 
-    .CodeMirror-activeline .CodeMirror-foldgutter-folded, 
-    .CodeMirror-activeline .CodeMirror-foldgutter-blank {
+    .CodeMirror-activeline .CodeMirror-foldgutter-open:after, 
+    .CodeMirror-activeline .CodeMirror-foldgutter-folded:after {
         color: #76554B;
     }
 
