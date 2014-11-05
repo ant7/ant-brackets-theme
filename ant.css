@@ -62,8 +62,11 @@
 /* Searching */
 .CodeMirror-searching {
     color: #5D1D15!important;
-    background: #FFFF26;
+    background: #fda832;
 }
+    .CodeMirror-searching.searching-current-match {
+        background-color: #FFFF26;
+    }
 
 /* Quick view highlight */
 .quick-view-highlight {
